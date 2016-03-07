@@ -1,16 +1,16 @@
 Source: kafka
 Section: database
 Priority: extra
-Maintainer: Aleksey Morarash <aleksey.morarash@gmail.com>
-Build-Depends: debhelper, dh-systemd
+Maintainer: Hound Developers <dev@hound.sh>
+Build-Depends: debhelper
 Standards-Version: 3.9.3
 Homepage: http://kafka.apache.org/
-Vcs-Git: https://github.com/EnvisionX/kafka-debian.git
-Vcs-Browser: https://github.com/EnvisionX/kafka-debian
+Vcs-Git: https://github.com/houndsh/kafka-debian.git
+Vcs-Browser: https://github.com/houndsh/kafka-debian
 
 Package: kafka
 Architecture: all
-Depends: openjdk-7-jre-headless
+Depends: 
 Description: Distributed, partitioned, replicated commit log service.
  Kafka is a distributed, partitioned, replicated commit log service.
  It provides the functionality of a messaging system, but with a unique design.
