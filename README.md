@@ -11,7 +11,7 @@ will ensure the JVM and service scripts are also installed.
 
 2. Use the build tool to download the tarball and build the packages:
 
-    $ ./build-from-url.sh <url>
+        $ ./build-from-url.sh <url>
 
 ## Footnotes
 
