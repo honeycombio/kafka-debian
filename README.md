@@ -15,7 +15,7 @@ will ensure the JVM and service scripts are also installed.
 
 ## Footnotes
 
-* There is no start/stop scripts included. This is up to you to provide.
+* There are no start/stop scripts included. This is up to you to provide.
 
 * The package intentionally has no JDK/JVM dependency. This is up to you
   to enforce.
