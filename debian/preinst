@@ -1,8 +1,12 @@
 #!/bin/sh -e
 
+. /usr/share/debconf/confmodule
+
 case "$1" in
     install|upgrade)
         adduser --system --group --no-create-home --home=/var/lib/kafka kafka || :
+        install --group=kafka --owner=kafka --mode=0755 --directory /var/lib/kafka
+        install --group=kafka --owner=kafka --mode=0755 --directory /var/log/kafka
         ;;
     abort-upgrade)
         ;;

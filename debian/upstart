@@ -1,0 +1,30 @@
+description "Kafka Broker"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+respawn limit 2 5
+
+umask 007
+kill timeout 60
+
+limit nofile 32768 32768
+
+setuid kafka
+setgid kafka
+ 
+script
+  . /etc/default/kafka
+
+  export LOG_DIR
+  export KAFKA_HOME
+  export KAFKA_HEAP_OPTS
+  export KAFKA_LOG4J_OPTS
+  export KAFKA_JMX_OPTS
+  export KAFKA_JVM_PERFORMANCE_OPTS
+
+  if [ "x$ENABLED" = "xyes" ]; then
+    exec ${KAFKA_HOME}/bin/kafka-server-start.sh ${CONFIG_HOME}/server.properties
+  fi
+end script

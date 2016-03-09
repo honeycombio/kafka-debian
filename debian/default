@@ -1,0 +1,9 @@
+ENABLED="no"
+CONFIG_HOME="/etc/kafka"
+KAFKA_HOME="/usr/lib/kafka"
+KAFKA_HEAP_OPTS="-Xmx256M -Xms256M"
+LOG_DIR="/var/log/kafka"
+
+KAFKA_LOG4J_OPTS=""
+KAFKA_JMX_OPTS=""
+KAFKA_JVM_PERFORMANCE_OPTS=""
